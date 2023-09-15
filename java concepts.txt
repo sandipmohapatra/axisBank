@@ -45,9 +45,10 @@ advantage of Aggregation
 5)reduce complexity.
 6)scalability :- aggregation allows us to add or remove parts as needed.
 7)Better Collaboration:- Developers can work on different parts of the system independently.
+8)Has-A relationship is also called aggregation and composition.
+9)is-a relationship is a specialization and generalization relationship.
+10)assosiation is a aggregation that represents a "whole-part" relationship between classes.
 ---------------------------------------------------------------------------------------------------------------
-
-
 example:-
 
 create a connection class
@@ -124,6 +125,90 @@ ob1.display();
 }
 }
 ------------------------------------------------------------------------------------------------------------------
+wap to create a Bank class (accno,branch,balance,customer)
+customer class (custid,name,address)
+-------------------------------------------------------------------------------------------------
+inheritance
+----------------------
+
+
+-----------------------------------
+Exception Handling
+-------------------------------
+why we are going for exception handling
+--------------------------------------------------------
+There are three types of error
+1)compile time error(missing of semi-colon,spelling mistake,...)
+2)run time error(divide by zero error,data type mismatch,crossing the array limit,...)
+3)logical error
+
+we use exception handling for runtime error mostly .so that if the enduser enter wrong input the program should not terminate it should give proper error message and continue till the end of the program.   
+
+There are three types of exception
+1)Checked Exception :- sql exception,IOException,Interrupted exception .This we have to handle then only it will allow to execute the program. 
+2)Unchecked Exception:-Arithmatic exception,Null pointer,arrayindex outof bound....
+3)Error:- harddisk failure,memory stack overflow.
+-----------------------
+we have five keywords
+1)try,2)catch,3)finally,4)throw 5)throws
+-------------------------------------------------------------
+throw is used for user defined exception.
+example:- marks should be greater than zero.
+salary show be greater than 18000.
+---------------------------------------------------------
+throws exception is mainly used for checked exception.It doesn't have any body.It is written with main method or any method.
+------------------------------------------------------------------------------------------
+example-1
+-------------------
+//checked exception unit you handle the error it will not allow to execute.
+package org.sandip;
+public class Test1 extends Thread
+{
+public static void main(String[] args) throws Exception 
+{
+	for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+			Thread.sleep(1000);
+			}
+	}	
+}
+----------------------------------------------------------------------------------
+example-2
+----------------------
+//checked exception unit you handle the error it will not allow to execute.
+package org.sandip;
+public class Test1 extends Thread
+{
+public static void main(String[] args)  
+{
+	for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			System.out.println("Interrupted Exception");
+			}
+			}
+	}	
+}
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
