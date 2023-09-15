@@ -721,6 +721,47 @@ System.out.println("The end of the program");
 }
 }
 ----------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class ErrorExample 
+{
+public static void main(String[] args) 
+{
+	try
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=a/b;
+System.out.println("The result is "+c);
+	}
+
+	finally
+	{
+	System.out.println("The end of the program");
+	}
+}
+}
+----------------------------------------------------------------------------------------------
+* finally block is mainly used for connection closing,class closing.. etc.The finally block definetly exceute.
+---------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class ErrorExample 
+{
+public static void main(String[] args) throws Exception
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter your age to cast your vote");
+	int age=ob.nextInt();
+	if(age>=18)
+		System.out.println("your are eligible to cash your vote");
+	else
+		throw new Exception("The age should be greater than or equal to 18 to caste your vote");
+}
+}
+
+----------------------------------------------------------------------
 
 
 
