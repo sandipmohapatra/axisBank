@@ -34,6 +34,19 @@ Here also we have code reusability.here it is loosely coupled.
 In this we will call a class with in another class.
 Spring it support has-a relationship.
 code reuse is best achieved by aggrgation then the inheritance(is-a) relationship.
+----------------------------------------------------------------------------------------------------------------------------------------------
+advantage of Aggregation
+-----------------------------------------
+1)Code Reusability:- we can use the existing classes as part of main class .This promote reuse in object-oriented programming.
+2)Modularity:- Aggrigation promotes a modular design,allow us to break down complex system into smaller ,manageable parts.
+.each part can be developed and tested independently.
+3)encapsulation:- aggregation allows you to encapsulate the dehaviour and data of the part class within the whole class.This means that the part class are hidden from the outside world,which enhances data security and maintainabillty.
+4)Improve Testing  facility.
+5)reduce complexity.
+6)scalability :- aggregation allows us to add or remove parts as needed.
+7)Better Collaboration:- Developers can work on different parts of the system independently.
+---------------------------------------------------------------------------------------------------------------
+
 
 example:-
 
