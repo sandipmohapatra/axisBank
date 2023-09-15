@@ -472,9 +472,200 @@ void display4();
  }
 -----------------------------------------------------------------------------------------------------------
 
+System.out.println()
 
+System------class
+out is an static object
+println() ----method
+-------------------------------------------------------------------------------
+oops concept
+----------------------
+1)class --it is object factory or framework/blue print of an object.
+It contains variables and methods .
+2)Object ---it is a referance pointer.By this we can access variables and methods of a class.
+3)Inheritance--It in we have parent and child concept.The child will access the variables and methods of the parent class.It is also known as re-usablity of existing code.
+4)polymerphisim:-
+  Method Overloading :- compile time Polymerphism.we need one class.
+The method name is same but the return type and parameter has different data type.
+example:-
+int sum(int a,int b);
+float sum(float a,float b);
 
+Method Overriding:- runtime Polymerphism.(abstract class,Interface).we need two or more class.
+5)encapsulation:- data protection/hiding.like a capsule protect the medicine by it's plastic coating.
+Here data is protected/hidden by using private access specifier.One class data will not be visible to other class.
 
+6)abstraction:- 
+we switch on the fan it start rotating.
+In this the complex part is hidden.The electricity is generated in a hydrolic/thermal power station.Then with transfers and cables it comes to our house. 
+So in methods we write complex algorithim which is hidden and within the class we call the methods by using objects.
+The complex part is hidden from the end users.The output is seen by the users.
+
+---------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
+ static :- we can declare a variable as static,method as static,we can have static block and we can have static class.
+We can access it without creating an object.
+We can access it with the help of the class name.
+A single copy of the static variable,method,block or class is created in the JVM.
+It is used for memory management.
+If we declare a static block it execute before the main method.
+---------------------------
+progarm-21
+---------------------------
+package Wednesday;
+public class StaticDemo 
+{
+static int rollno=10;
+static String name="trupti";
+static String address="orissa";
+static void display()
+{
+	System.out.println(rollno+ " "+name+"  "+address);
+}
+static
+{
+	System.out.println("This is a static block");
+}
+public static void main(String[] args)
+{
+System.out.println("rollno is "+rollno);	
+System.out.println("the name is "+StaticDemo.name);
+System.out.println("the address is"+StaticDemo.address);
+display();
+StaticDemo.display();
+}}
+ ----------------------------------------------------------------------------------------------
+ we cannot access a non-static variables inside a static method.
+we can access static variables inside a non-static method.
+program-22
+----------------------
+package Wednesday;
+public class StaticDemo 
+{
+static int rollno=10;
+static String name="trupti";
+ static String address="orissa";
+static void display()//we cannot access a non-static variable inside a static method.
+{
+	System.out.println(rollno+ " "+name+"  "+address);
+}
+static 
+{
+	System.out.println("This is a static block");
+}
+public static void main(String[] args)//we cannot access a non-static variable inside a static method.
+{
+System.out.println("rollno is "+rollno);	
+System.out.println("the name is "+StaticDemo.name);
+System.out.println("the address is"+StaticDemo.address);
+display();
+StaticDemo.display();
+}}
+--------------------------------------------------------
+Once incremented the static variable value remain incremented.
+ program-23
+--------------------------
+
+package Wednesday;
+public class StaticDemo 
+{
+static int rollno=10;
+static String name="trupti";
+ static String address="orissa";
+ static int i;
+static void display()//we cannot access a non-static variable inside a static method.
+{
+	System.out.println(rollno+ " "+name+"  "+address);
+}
+static void counter()
+{
+	i++;
+	System.out.println(i);
+}
+static 
+{
+	System.out.println("This is a static block");
+}
+public static void main(String[] args)//we cannot access a non-static variable inside a static method.
+{
+System.out.println("rollno is "+rollno);	
+System.out.println("the name is "+StaticDemo.name);
+System.out.println("the address is"+StaticDemo.address);
+display();
+StaticDemo.display();
+counter();
+counter();
+counter();
+counter();
+}}
+----------------------------------------------------------------------------------------------------
+ final keyword
+-------------------------
+This is a done to protect the data.
+We can declare the variable as final,method as final and class as final.
+If we declare variable as final we have to assign it and it cannot be changed.
+If we declare method as final we cannot override it.
+If we declare a class as final we cannot inherite it.
+--------------------------------------------------------------------------------------------------
+program-24
+-----------------------
+package Wednesday;
+public final class FinalDemo 
+{
+final int a=10;
+final void display()
+{
+	System.out.println("this is final display");
+}
+public static void main(String[] args) {
+	FinalDemo ob=new FinalDemo();
+	ob.display();
+	System.out.println("the value of a is"+ob.a);
+}
+}
+------------------------------------------------------------------------------ 
+ create an interface employee :- 
+input details(empno,name,address);
+display details();
+-------------------------------------------------
+create a child class to take input and display the details
+--------------------------------------------------------------------------------------
+static class:- It is used in the case of inner class.A inner class can be static.
+syntax:-
+class outer 
+{
+static int rollno=20;
+static class inner
+{
+}
+main
+{
+outer.inner obj=new outer.inner();
+}}
+---------------------------------------------------------------
+program-25
+------------------------
+package Thrusday;
+
+public class OuterClass 
+{
+static int rollno=10;//class variable,global variables can be accessed anywhere within the program
+static String name="sandip";
+static class inner
+{
+	void display()
+	{
+		System.out.println("The rollno is "+rollno);
+		System.out.println("The name is "+name);
+	}
+}
+public static void main(String[] args) 
+{
+OuterClass.inner obj=new OuterClass.inner();
+obj.display();
+}
+}
+------------------------------------------------------------------
 
 
 
