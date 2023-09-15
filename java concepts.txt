@@ -1,0 +1,117 @@
+Object Oriented Programming Language
+---------------------------------------------------------
+1)Class :- A class is known as object framework.
+A class contains variables and methods.
+2)Object is a reference pointer to the class.
+we can access the variables and methods of a class using object.
+-------------------------------------------------------------------------------------
+3)Inheritance (is-a)relationship
+(parent class/base class/super class)--------------------(child class,sub class,derived class)
+It is a mechanism in which one object acquires all the properties and behaviour of a parent class.
+It has parent class relationship which is known as is-a relationship.
+It is a tight coupling.The child class depend upon the parent class.It is reusability of a parent class.
+we use the key word super to access the super class methods and variables.
+we use the keyword extends to access the parent class into the child class.
+example:- we have iphone 6,7,8,9,10...14
+all features of iphone 6 is present in iphone 7 plus we have some added features.we are not writing the code from the begining.
+we are reusing the exsisting 6 features.
+
+The child class depend upon the parent class.
+If the parent class fails to start or have any error than the child class will also fail to start.because child class is totally dependend on the parent class.
+
+
+
+
+----------------------------------------------------------------------------------------------------------
+4)Aggregation(has-a)relationship
+-----------------------------------------------------------
+It is a has-a relationship.
+example :- 
+employee has a address
+employee has a salary
+house has a kitchen
+Here also we have code reusability.here it is loosely coupled.
+In this we will call a class with in another class.
+Spring it support has-a relationship.
+code reuse is best achieved by aggrgation then the inheritance(is-a) relationship.
+
+example:-
+
+create a connection class
+we call it inside our main class.
+
+@Autowire
+JDBCConnection jdbc;
+
+--->username/password is incorrect.
+Then also the main class will execute other statements.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+example-1
+--------------------
+package org.sandip;
+
+public class Address
+{
+	int streettno;
+String city,state,loc;
+public Address(int streettno, String city, String state, String loc) {
+	super();
+	this.streettno = streettno;
+	this.city = city;
+	this.state = state;
+	this.loc = loc;
+}
+@Override
+public String toString() {
+	return "Address [streettno=" + streettno + ", city=" + city + ", state=" + state + ", loc=" + loc + "]";
+}
+
+
+}
+----------------------------------------------------------------------------------------
+package org.sandip;
+
+public class Employee
+{
+int empno;
+String name,dept;
+Address add;
+public Employee(int empno, String name, String dept, Address add) {
+	super();
+	this.empno = empno;
+	this.name = name;
+	this.dept = dept;
+	this.add = add;
+}
+@Override
+public String toString() {
+	return "Employee [empno=" + empno + ", name=" + name + ", dept=" + dept + ", add=" + add + "]";
+}
+public void display()
+{
+	System.out.println("the empno is "+empno);
+	System.out.println("the name is "+name);
+	System.out.println("the dept is "+dept);
+	System.out.println("the address is "+add);
+	
+}
+
+}
+--------------------------------------------------------------------------------------------------------
+package org.sandip;
+
+public class Mainclass 
+{
+public static void main(String[] args)
+{
+Address ob=new Address(10,"Bangalore","Karnataka","near airport");
+Employee ob1=new Employee(101,"sandip","sales",ob);
+ob1.display();
+}
+}
+------------------------------------------------------------------------------------------------------------------
+
+
+
+
