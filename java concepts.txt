@@ -374,7 +374,103 @@ class AbstractDemo extends Abstract1
 	}
 }
 -----------------------------------------------------------------------------
-
+--------------------------------------------------------------------------
+Create a abstract class bank 
+having abstract methods register(),apply for loan,credit card,dedit card.
+create a child class customer .override all the methods and create object.
+--------------------------------------------------------------------------------------------
+Interface:-
+It is similar to abstract class but it only contains abstract methods no concrete methods.we don't use the keyword abstract in this.
+We cannot create object for an interface.
+We have to implement the interface into a child class.
+We have to override the abstract methods into a child class and create object for the child class.
+By interface java performs the multiple Inheritance.
+we can declare a variable inside a interface .this is by default static(we can access it without object )
+and final(cann't be changed)
+--------------------------------------------------------------------------------------------------
+progarm-19
+-----------------------
+package Wednesday;
+ interface Interface1
+ {
+void display1();
+}
+ interface Interface2 extends Interface1
+ {
+void display2();
+}
+ interface Interface3
+ {
+void display3();
+}
+ interface Interface4 
+ {
+void display4();
+}
+ class InterfaceDemo implements Interface2,Interface3,Interface4
+ {
+	@Override
+	public void display1() {
+				System.out.println("display1");	 }
+	@Override
+	public void display4() {
+		System.out.println("display4");		}
+	@Override
+	public void display3() {
+		System.out.println("display3");			}
+	@Override
+	public void display2() {
+		System.out.println("display2");
+			}
+	 public static void main(String[] args) {
+		 InterfaceDemo ob=new InterfaceDemo();
+	ob.display1(); ob.display2(); ob.display3();  ob.display4();
+	}
+ }
+ -------------------------------------------------------------------------------------------------------------------
+ program-20
+-------------------------
+package Wednesday;
+ interface Interface1
+ {
+	 int a=10;//this is by default static(we can access it without object and final(cann't be changed)
+void display1();
+}
+ interface Interface2 extends Interface1
+ {
+void display2();
+}
+ interface Interface3
+ {
+void display3();
+}
+ interface Interface4 
+ {
+void display4();
+}
+ class InterfaceDemo implements Interface2,Interface3,Interface4
+ {
+	@Override
+	public void display1() {
+				System.out.println("display1");	 }
+	@Override
+	public void display4() {
+		System.out.println("display4");		}
+	@Override
+	public void display3() {
+		System.out.println("display3");			}
+	@Override
+	public void display2() {
+		System.out.println("display2");
+			}
+	 public static void main(String[] args)
+	 {
+		 System.out.println("the value of a is "+a);
+		 InterfaceDemo ob=new InterfaceDemo();
+		 ob.display1(); ob.display2(); ob.display3();  ob.display4();
+	}
+ }
+-----------------------------------------------------------------------------------------------------------
 
 
 
