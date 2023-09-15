@@ -762,10 +762,114 @@ public static void main(String[] args) throws Exception
 }
 
 ----------------------------------------------------------------------
-
-
-
-
+Collection Framework
+----------------------------------------
+int a[]=new int[5]; ---------------array the size is fixed.
+In case of Collection the size will be incrementing or decrement dyamically as we enter the data or remove the data.
+---------------------------------------------------------------
+It is a collection of Object.
+It provides architecture to store,manupulate group of Objects.
+We can do all operations such as searching,sorting,inserting,delete,manupulating .
+1)Set 2)List 3)Map4)Queue are inteface.
+----------------------------------------------------------------------------
+Set is a Interface .It doesnot allow duplicate data.
+It has classes :-
+1)TreeSet :- It will display the data in the shorted order.
+2)HashSet :-It will display the data in random order.
+3)LinkedHashSet :- It will display the data in same order.
+---------------------------------------------------------------------------
+List :-It is an Interface.
+It allows duplicate records.
+We have classes 1)Stack 2)ArrayList 3)Linkedlist 4)Vector
+stack :FILO .The last element will be index 0.
+List display in the same order.
+---------------------------------------------------------------------------
+example Treeset
+-----------------------------
+It will display the data in the shorted order.
+-------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class SetExample 
+{
+public static void main(String[] args) 
+{
+TreeSet<Integer> ts=new TreeSet<Integer>();
+ts.add(20);
+ts.add(30);
+ts.add(50);
+ts.add(40);
+ts.add(50);
+ts.add(20);
+ts.add(40);
+ts.add(70);
+System.out.println(ts);
+}
+}
+----------------------------------------------------------------------------------------------------
+It will display the data in random order.
+--------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class SetExample 
+{
+public static void main(String[] args) 
+{
+HashSet<Integer> ts=new HashSet<Integer>();
+ts.add(20);
+ts.add(30);
+ts.add(50);
+ts.add(40);
+ts.add(50);
+ts.add(20);
+ts.add(40);
+ts.add(70);
+System.out.println(ts);
+}
+}
+--------------------------------------------------------------------------------------
+LinkedHashSet :- It will display the data in same order.
+package org.sandip;
+import java.util.*;
+public class SetExample 
+{
+public static void main(String[] args) 
+{
+LinkedHashSet<Integer> ts=new LinkedHashSet<Integer>();
+ts.add(20);
+ts.add(30);
+ts.add(50);
+ts.add(40);
+ts.add(50);
+ts.add(20);
+ts.add(40);
+ts.add(70);
+System.out.println(ts);
+}
+}
+-----------------------------------------------------------------------------------------
+Linked list
+---------------------
+It allows duplicate records.It will display in the same order.
+package org.sandip;
+import java.util.*;
+public class SetExample 
+{
+public static void main(String[] args) 
+{
+LinkedList<Integer> ts=new LinkedList<Integer>();
+ts.add(20);
+ts.add(30);
+ts.add(50);
+ts.add(40);
+ts.add(50);
+ts.add(20);
+ts.add(40);
+ts.add(70);
+System.out.println(ts);
+}
+}
+---------------------------------------------------------------------------------------
 
 
 
