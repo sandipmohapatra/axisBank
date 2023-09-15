@@ -194,6 +194,75 @@ public static void main(String[] args)
 	}	
 }
 ------------------------------------------------------------------
+inheritance
+----------------------
+package org.sandip;
+import java.util.*;
+public class Student 
+{
+int rollno;
+String name,address;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name,address");
+	rollno=ob.nextInt();
+	name=ob.next();
+	address=ob.next();
+}
+void display()
+{
+	System.out.println("the rollno is"+rollno+"the name is "+name+"the address is "+address);
+}
+}
+------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class Marks extends Student
+{
+int phy,chem,math,total,avg;
+String grade;
+void input()
+{
+	super.input();
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter phy,chem,math marks");
+	phy=ob.nextInt();
+	chem=ob.nextInt();
+	math=ob.nextInt();
+	total=phy+chem+math;
+	avg=total/3;
+	if(avg>70)
+		grade="First Grade";
+	else if(avg>60)
+		grade="Second Grade";
+	else if(avg>50)
+		grade="Third Grade";
+	else
+		grade="Fail";
+}
+void display()
+{
+	super.display();
+	System.out.println("the total is "+total);
+	System.out.println("the average is "+avg);
+	System.out.println("The grade is "+grade);
+}
+public static void main(String[] args)
+{
+	Marks ob=new Marks();  //child class
+	ob.input();
+	ob.display();
+}
+}
+---------------------------------------------------------------------------------------
+wap to create a customer class(name,address,phoneno)
+create class called shopping extending the customer class
+shopping class(product id,product name,price)
+
+and display the details
+------------------------------------------------------------------------
+
 
 
 
