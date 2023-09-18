@@ -1029,6 +1029,38 @@ public static void main(String[] args) {
 }
 	}
 -------------------------------------------------------------------------------------------------------------------------------
+stack:-Fast in Last out
+-------------------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSetDemo 
+{
+public static void main(String[] args) {
+	Stack<Integer> ts=new Stack<Integer>();
+	ts.push(70);
+	ts.push(50);
+	ts.push(60);
+	ts.push(40);
+	ts.push(30);
+	ts.push(20);
+	ts.push(10);
+		System.out.println(ts);
+	System.out.println(ts.pop());//delete the last data
+	System.out.println(ts);
+	System.out.println(ts.peek());//to see the last data
+	System.out.println(ts.pop());//delete the last data
+	System.out.println(ts);
+		}
+	}
+-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
