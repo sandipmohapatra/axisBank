@@ -1053,8 +1053,38 @@ public static void main(String[] args) {
 		}
 	}
 -----------------------------------------------------------------------------------------
-
-
+wap to create a bank class and store customers data and display it.
+use linked list
+--------------------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSetDemo 
+{
+public static void main(String[] args) {
+	Stack<Integer> ts=new Stack<Integer>();
+	ts.push(70);
+	ts.push(50);
+	ts.push(60);
+	ts.push(40);
+	ts.push(30);
+	ts.push(20);
+	ts.push(10);
+	System.out.println(ts.search(70));
+	System.out.println(ts);
+	System.out.println(ts.pop());//delete the last data
+	System.out.println(ts);
+	System.out.println(ts.peek());//to see the last data
+	System.out.println(ts.pop());//delete the last data
+	System.out.println(ts);
+	System.out.println(ts.search(70));
+	System.out.println(ts.search(50));
+	//for(Object obj:ts)
+	//System.out.println(obj);
+	ts.forEach((x)->System.out.println(x));
+	
+		}
+	}
+--------------------------------------------------------------------------------------------------
 
 
 
