@@ -1085,8 +1085,112 @@ public static void main(String[] args) {
 		}
 	}
 --------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class LinkedListDemo 
+{
+public static void main(String[] args) 
+{
+LinkedList<Integer> ls1=new LinkedList<Integer>();
+LinkedList<Integer> ls2=new LinkedList<Integer>();
+ls1.add(70);
+ls1.add(60);
+ls1.add(50);
+ls1.add(40);
 
+ls2.add(700);
+ls2.add(500);
+ls2.add(300);
+ls2.add(400);
+ls1.forEach((x)->System.out.println(x));
+ls2.forEach((y)->System.out.println(y));
 
+ls1.addFirst(80);
+ls1.addLast(20);
+
+ls2.addFirst(800);
+ls2.addLast(200);
+
+ls1.removeFirst();
+ls1.removeLast();
+
+ls1.forEach((x)->System.out.println(x));
+ls2.getFirst();
+ls2.getLast();
+
+ls1.addAll(ls2);
+System.out.println(ls1);
+
+		}
+	}
+--------------------------------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class LinkedListDemo 
+{
+public static void main(String[] args) 
+{
+LinkedList<Integer> ls1=new LinkedList<Integer>();
+ls1.add(70);
+ls1.add(60);
+ls1.add(50);
+ls1.add(40);
+ls1.add(30);
+ls1.add(20);
+Collections.sort(ls1);
+ls1.forEach((x)->System.out.println(x));
+		}
+	}
+-----------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class LinkedListDemo 
+{
+public static void main(String[] args) 
+{
+LinkedList<Integer> ls1=new LinkedList<Integer>();
+ls1.add(70);
+ls1.add(60);
+ls1.add(50);
+ls1.add(40);
+ls1.add(30);
+ls1.add(20);
+System.out.println("The highest no is "+Collections.max(ls1));
+System.out.println("The lowest no is "+Collections.min(ls1));
+		}
+	}
+--------------------------------------------------------------------------------------------------------------------
+ListIterator():- In this we can move in both direction.
+forward:- we have 2 mothods hasNext(),next()
+backward:-we have 2 methods hasPrevious,previous()
+----------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class LinkedListDemo 
+{
+public static void main(String[] args) 
+{
+LinkedList<Integer> ls1=new LinkedList<Integer>();
+ls1.add(70);
+ls1.add(60);
+ls1.add(50);
+ls1.add(40);
+ls1.add(30);
+ls1.add(20);
+ListIterator<Integer> ls=ls1.listIterator();
+while(ls.hasNext())
+{
+	System.out.println(ls.next());
+}
+System.out.println("*********************************************");
+while(ls.hasPrevious())
+{
+	System.out.println(ls.previous());
+}
+
+		}
+	}
+----------------------------------------------------------------------------------------------------------------------
 
 
 
