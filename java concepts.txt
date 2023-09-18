@@ -1367,6 +1367,63 @@ System.out.println(hm);
 }
 }
 ----------------------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class MapDemo 
+{
+public static void main(String[] args) 
+{
+HashMap<Integer, String> hm=new HashMap<Integer, String>();
+hm.put(1,"sandip");
+hm.put(2,"Kiran");
+hm.put(3,"Madhu");
+hm.put(4,"Sunil");
+hm.put(5,"Anil");
+hm.put(6,"Amit");
+Scanner ob=new Scanner(System.in);
+System.out.println("enter rollno and name");
+int rollno=ob.nextInt();
+String name=ob.next();
+hm.put(rollno, name);
+System.out.println(hm);
+Set set=hm.entrySet();
+Iterator itr=set.iterator();
+while(itr.hasNext())
+{
+	Map.Entry en=(Map.Entry<Integer,String>)itr.next();
+			System.out.println(en.getKey()+"     "+en.getValue());
+
+	}
+}
+}
+------------------------------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class MapDemo 
+{
+public static void main(String[] args) 
+{
+HashMap<Integer, String> hm=new HashMap<Integer, String>();
+hm.put(1,"sandip");
+hm.put(2,"Kiran");
+hm.put(3,"Madhu");
+hm.put(4,"Sunil");
+hm.put(5,"Anil");
+hm.put(6,"Amit");
+Scanner ob=new Scanner(System.in);
+System.out.println("enter rollno and name");
+int rollno=ob.nextInt();
+String name=ob.next();
+hm.put(rollno, name);
+System.out.println(hm);
+System.out.println("enter the rollno you want to search");
+int x=ob.nextInt();
+for(Map.Entry<Integer, String> m:hm.entrySet())
+	if(m.getKey()==x)
+		System.out.println(m.getKey()+"    "+m.getValue());
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------
 
 
 
