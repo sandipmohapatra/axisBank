@@ -1424,11 +1424,86 @@ for(Map.Entry<Integer, String> m:hm.entrySet())
 }
 }
 ----------------------------------------------------------------------------------------------------------------------------------
+wap to enter a customer's bank details as an object.and accno as a key.
+if you enter a particular accno then corrosponding details should be displayed.
+----------------------------------------------------------------------------------------------------------------------
+if you enter accno 4 then it's name,address,phoneno and balnace should display.
+----------------------------------------------------------------------------------------------------
+Comparator it belongs to java.util.Comparator
+----------------------------------------------------------------------------------------
+package org.sandip;
 
+public class Bank {
+int accno,bal;
+String name;
+public Bank(int accno, int bal, String name) {
+	this.accno = accno;
+	this.bal = bal;
+	this.name = name;
+}
+}
+--------------------------------------------------------------------------------------------
+package org.sandip;
 
+import java.util.Comparator;
 
-
-
+public class BalanceCompare implements Comparator
+{
+public int compare(Object ob1,Object ob2)
+{
+	Bank b1=(Bank) ob1;
+	Bank b2=(Bank) ob2;
+	if(b1.bal==b2.bal)
+	return 0;
+	else if(b1.bal>b2.bal)
+	return 1;
+	else
+		return -1;
+}
+}
+-------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class BankMain {
+public static void main(String[] args) {
+	ArrayList<Bank> al=new ArrayList<Bank>();
+	al.add(new Bank(101,7000,"sandip"));
+	al.add(new Bank(103,5000,"sunil"));
+	al.add(new Bank(102,6000,"amit"));
+	al.add(new Bank(104,8000,"kiran"));
+	System.out.println("Balance Compare");
+	Collections.sort(al,new BalanceCompare());
+	Iterator itr=al.iterator();
+	while(itr.hasNext())
+	{
+		Bank bk=(Bank) itr.next();
+		System.out.println(bk.accno+"   "+bk.name+"   "+bk.bal);
+	}
+}
+}
+-----------------------------------------------------------------------------------------------------------------------
+comparable :- it is a single sorting sequence.We can sort a single element such as id,name or price.
+comparator:- it is a multiple sorting sequences.We can sort the collection on the basic of multiple elements such as id,name and price.
+example:- comparable 
+@Override
+	public int comp(Student2 o) {
+	
+		return name.compareTo(o.name);
+	}
+---------------------------------------------------------------------------------------
+example:- comparator
+public int compare(Object ob1,Object ob2)
+{
+	Bank b1=(Bank) ob1;
+	Bank b2=(Bank) ob2;
+	if(b1.bal==b2.bal)
+	return 0;
+	else if(b1.bal>b2.bal)
+	return 1;
+	else
+		return -1;
+}
+------------------------------------------------------------------------------
 
 
 
