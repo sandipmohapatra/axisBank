@@ -1209,8 +1209,93 @@ ls1.forEach((x)->System.out.println(x));
 		}
 	}
 ---------------------------------------------------------------------------------------------
+sorting the Object(rollno,name,address) we have to sort by rollno)
+-----------------------------------------------------------------------------------------------
+java.lang.Comparable
+---------------------------------------
+we have a abstract method in it called int compareTo(T)
+It is used to sort by object data.
+If the current object is greater than the specified object it return (+) value.
+If the current object is less than the specified object it return (-) value.
+If the current object is equal than the specified object it return zero value.
+--------------------------------------------------------------------------------------------------------------------------
+package org.sandip;
 
+public class Student2 implements Comparable<Student2> 
+{
+	int rollno;
+String name;
+Student2(String name,int rollno)
+{
+	this.name=name;
+	this.rollno=rollno;
+}
+	@Override
+	public int compareTo(Student2 o) {
+	
+		return name.compareTo(o.name);
+	}
+	@Override
+	public String toString() {
+		return "Student2 [rollno=" + rollno + ", name=" + name + "]";
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class Student3 {
+public static void main(String[] args) {
+	ArrayList<Student2> al=new ArrayList<Student2>();
+	al.add(new Student2("sandip",6));
+	al.add(new Student2("madhu",5));
+	al.add(new Student2("geet",3));
+	al.add(new Student2("amit",4));
+	al.add(new Student2("anil",2));
+	Collections.sort(al);
+	al.forEach((x)->System.out.println(x));
+}
+}
+------------------------------------------------------------------------------------------
 
+example-2
+---------------------
+package org.sandip;
+
+public class Student2 implements Comparable<Student2> 
+{
+	Integer rollno;
+String name;
+Student2(String name,Integer rollno)
+{
+	this.name=name;
+	this.rollno=rollno;
+}
+	@Override
+	public int compareTo(Student2 obj) {
+	
+		return rollno.compareTo(obj.rollno);
+	}
+	@Override
+	public String toString() {
+		return "Student2 [rollno=" + rollno + ", name=" + name + "]";
+	}
+}
+----------------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class Student3 {
+public static void main(String[] args) {
+	ArrayList<Student2> al=new ArrayList<Student2>();
+	al.add(new Student2("sandip",6));
+	al.add(new Student2("madhu",5));
+	al.add(new Student2("geet",3));
+	al.add(new Student2("amit",4));
+	al.add(new Student2("anil",2));
+	Collections.sort(al);
+	al.forEach((x)->System.out.println(x));
+}
+}
+---------------------------------------------------------------------------------------------------
 
 
 
