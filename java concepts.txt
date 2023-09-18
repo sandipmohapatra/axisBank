@@ -1504,7 +1504,12 @@ public int compare(Object ob1,Object ob2)
 		return -1;
 }
 ------------------------------------------------------------------------------
-
+wap to create an employee class (empno,name,age and salary)
+sort the employee according to salary and display it
+---------------------------------------------------------------------------------------
+using comparator 
+and using comparable
+---------------------------------------------------------------------------------------
 
 
 
