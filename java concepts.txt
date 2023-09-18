@@ -1191,6 +1191,25 @@ while(ls.hasPrevious())
 		}
 	}
 ----------------------------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class LinkedListDemo 
+{
+public static void main(String[] args) 
+{
+LinkedList<Integer> ls1=new LinkedList<Integer>();
+ls1.add(70);
+ls1.add(60);
+ls1.add(50);
+ls1.add(40);
+ls1.add(30);
+ls1.add(20);
+Collections.sort(ls1,Collections.reverseOrder());
+ls1.forEach((x)->System.out.println(x));
+		}
+	}
+---------------------------------------------------------------------------------------------
+
 
 
 
