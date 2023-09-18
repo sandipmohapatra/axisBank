@@ -1,12 +1,12 @@
 Object Oriented Programming Language
 ---------------------------------------------------------
-1)Class :- A class is known as object framework.
+1)Class :- A class is known as object framework or blue print of an object.
 A class contains variables and methods.
 2)Object is a reference pointer to the class.
 we can access the variables and methods of a class using object.
 -------------------------------------------------------------------------------------
 3)Inheritance (is-a)relationship
-(parent class/base class/super class)--------------------(child class,sub class,derived class)
+(parent class/base class/super class)------<--------------(child class,sub class,derived class)
 It is a mechanism in which one object acquires all the properties and behaviour of a parent class.
 It has parent class relationship which is known as is-a relationship.
 It is a tight coupling.The child class depend upon the parent class.It is reusability of a parent class.
@@ -130,8 +130,6 @@ customer class (custid,name,address)
 -------------------------------------------------------------------------------------------------
 inheritance
 ----------------------
-
-
 -----------------------------------
 Exception Handling
 -------------------------------
@@ -784,8 +782,8 @@ We have classes 1)Stack 2)ArrayList 3)Linkedlist 4)Vector
 stack :FILO .The last element will be index 0.
 List display in the same order.
 ---------------------------------------------------------------------------
-example Treeset
------------------------------
+Example of Treeset
+-------------------------------------------------------------------
 It will display the data in the shorted order.
 -------------------------------------------------------------------
 package org.sandip;
@@ -806,7 +804,8 @@ ts.add(70);
 System.out.println(ts);
 }
 }
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------I
+HashSet:-
 It will display the data in random order.
 --------------------------------------------------------------
 package org.sandip;
@@ -829,6 +828,7 @@ System.out.println(ts);
 }
 --------------------------------------------------------------------------------------
 LinkedHashSet :- It will display the data in same order.
+--------------------------------------------------------------------------------------
 package org.sandip;
 import java.util.*;
 public class SetExample 
@@ -849,7 +849,7 @@ System.out.println(ts);
 }
 -----------------------------------------------------------------------------------------
 Linked list
----------------------
+----------------------------------------------------------------------------------------
 It allows duplicate records.It will display in the same order.
 package org.sandip;
 import java.util.*;
@@ -871,7 +871,44 @@ System.out.println(ts);
 }
 ---------------------------------------------------------------------------------------
 
-
+example-1
+------------------------
+package org.sandip;
+public class Student1 
+{
+int rollno;
+String name,address;
+public Student1(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student1 [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+}
+-----------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class ListDemo 
+{
+public static void main(String[] args) 
+{
+Student1 st1=new Student1(101,"sandip","Bangalore");
+Student1 st2=new Student1(102,"Kiran","Bangalore");
+Student1 st3=new Student1(103,"sunil","Bangalore");
+LinkedList<Student1> ls=new LinkedList<Student1>();
+ls.add(st1);
+ls.add(st2);
+ls.add(st3);
+System.out.println(ls);
+for(Object obj:ls)
+	System.out.println(obj);
+}
+}
+---------------------------------------------------------------------------------------------------------
 
 
 
