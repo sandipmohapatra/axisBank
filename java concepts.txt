@@ -1337,6 +1337,38 @@ public static void main(String[] args) {
 }
 }
 -----------------------------------------------------------------------------------------------------------------------------------------
+Map :- It is an interface.
+In this we have key and value pair.
+The key should not be duplicate .The value can be duplicate.
+The key and value pair is known as entry.
+Map is useful to search,update,or delete element by using key.
+---------------------------------------------------------------------------------------------------
+HashMap,LinkedHashMap,
+------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class MapDemo 
+{
+public static void main(String[] args) 
+{
+HashMap<Integer, String> hm=new HashMap<Integer, String>();
+hm.put(1,"sandip");
+hm.put(2,"Kiran");
+hm.put(3,"Madhu");
+hm.put(4,"Sunil");
+hm.put(5,"Anil");
+hm.put(6,"Amit");
+Scanner ob=new Scanner(System.in);
+System.out.println("enter rollno and name");
+int rollno=ob.nextInt();
+String name=ob.next();
+hm.put(rollno, name);
+System.out.println(hm);
+}
+}
+----------------------------------------------------------------------------------------------------------------
+
+
 
 
 
