@@ -1213,6 +1213,7 @@ sorting the Object(rollno,name,address) we have to sort by rollno)
 -----------------------------------------------------------------------------------------------
 java.lang.Comparable
 ---------------------------------------
+Comparable is an interface.
 we have a abstract method in it called int compareTo(T)
 It is used to sort by object data.
 If the current object is greater than the specified object it return (+) value.
@@ -1296,9 +1297,46 @@ public static void main(String[] args) {
 }
 }
 ---------------------------------------------------------------------------------------------------
+example-3
+-------------------------
+package org.sandip;
 
+public class Product 
+{
+Integer id;
+String name;
+Float price;
+public Product(Integer id,String name,Float price)
+{
+this.id=id;
+this.name=name;
+this.price=price;
+}
+@Override
+public String toString() {
+	return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+}
 
+}
 
+-------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class SortProduct 
+{
+public static void main(String[] args) {
+	ArrayList<Product> al=new ArrayList<Product>();
+	al.add(new Product(1,"laptop",56000f));
+	al.add(new Product(2,"desktop",16000f));
+	al.add(new Product(3,"phone",26000f));
+	al.add(new Product(4,"tablet",36000f));
+	//sort according to price
+	Collections.sort(al,(ob1,ob2)->{ return ob1.price.compareTo(ob2.price);});
+	
+	al.forEach((x)->System.out.println(x));
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
