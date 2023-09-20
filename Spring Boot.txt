@@ -3070,7 +3070,17 @@ System is a class.
 out is a static object
 println() is a method 
 ------------------------------------------------
+how to download postnman
+--------------------------------------------
+https://www.postman.com/downloads/
 
+download windows-64bits
+----------------------------------------------------------------
+postman is used for testing our rest webservices.
+
+our browser only support get
+for put,delete and post we use postman 
+-----------------------------------------------------------------------------------
 
 
 
