@@ -3049,10 +3049,27 @@ public class SpringBoothappiestmind3Application {
 
 }
 ----------------------------------------------------------------------------------------------------------------
-
-
-
-
+OOPs concept
+----------------------------
+1)class is a collection of objects.It is an blue-print of object.
+2)object is an instance of a class.It is also called as an entity.It is a reference pointer.
+3)Inheritance:- an object which acquires the properties and behaviour of the parent class.It provides code reuseability.
+4)polymorphism:- if one task is performed in different way .we use method overloading and method overriding.
+5)abstraction:-Hiding internal details and showing functionality is known as abstraction.example :-fan,car,atm
+6)encapsulation:-data binding(wrapping) code and data together into a single unit. (example capsule bind or store different medicines togethor.
+7)coupling :-knowledge or information or dependency of another class.(teight coupling,loose coupling)
+8)cohesion:-it is a level of a component which performs a single well-defined task.
+9)Association:-It is the relationships between the objects.
+one-one ,one-many,many-one,many-many.
+10)Aggregation:-It represents the relationship where one object contains other object as part of its state.It is a way of achieving association.It is weak relationship between the objects. example:- employee has a salary,house has a kichen.
+11)Composition:-It is a way of achieving association.There is strong relationship between the conatining object and the dependent object.If the parent object is deleted then all the child objects will be deleted automatically.
+example:- loan class and EMI class.
+------------------------------------------------------------------------------------------
+System.out.println():-
+System is a class.
+out is a static object
+println() is a method 
+------------------------------------------------
 
 
 
