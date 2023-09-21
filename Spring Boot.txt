@@ -3083,10 +3083,35 @@ postman is used for testing our rest webservices.
 our browser only support get
 for put,delete and post we use postman 
 -----------------------------------------------------------------------------------
+Flow of the springboot project
+--------------------------------------------------
+1)we will run the main class with @SpringBootApplication.
+2)controller will exceute where according to the url the view page will open
+example:- localhost:8090/show1
+according to the return the login.jsp will be displayed.
+@GetMapping("/s1")
+	public String showLogin()
+	{
+		return "login";
+	}
+----------------------------------------------------------------------
+3)in the login.jsp we have  <form action=login>
+so 
+@RequestMapping("/login")
+	public String doRegistration(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
+	{
+		String a=req.getParameter("t1");
+		String b=req.getParameter("t2");
 
-
-
-
+		String sql="insert into login values(?,?)";
+		jt.update(sql,a,b);
+		System.out.println("row inserted");
+		return "success";
+		
+	}
+-------------------------------------------------------------------------
+4)In this the return is success so the success.jsp will display as the output.
+---------------------------------------------------------------------------------------------------------------------
 
 
 
