@@ -121,7 +121,9 @@ if class name is "Employee" it will create object as "employee"
 we can specify the object name :-@Component("msg")
 so msg is the object name.
 example :- MyMessage msg=new MyMessage();
---------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+@SpringBootApplication: This annotation is typically placed on the main class of a Spring Boot application. It combines three commonly used annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan. @ComponentScan is responsible for scanning the specified package and its sub-packages for Spring components, such as @Component, @Service, @Repository, and @Controller.
+---------------------------------------------------------------------------------------------------------------------
 to read object from container we use method
 getBean("objectName",ClassName.class);
 ----------------------------------------------------------------------------------------------------------------------------------
