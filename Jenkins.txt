@@ -1,0 +1,50 @@
+Jenkins
+---------------------
+1)It is a open source automation tool for continuous integration.
+2)Jenkin tests the build continously making the devlopers easy to integrate changes made to the project.
+3)Jenkins offers a continuous integration and continuous delivery .
+4)we have to create a git repositories using pipelines .
+5)The lifecycle of jenkin is 1)build 2)document3)test4)package5)stage6)deploy.
+
+How to create build
+---------------------------------
+1)right click on project
+2)maven clean
+3)maven install
+4)the jar/war file is created in the target folder.
+5)goto the jar file location and open cmd
+6)java -jar SpringBootDemo3-0.0.1-SNAPSHOT.jar
+7)The build will run in the command prompt.
+8)we develop our code and store into the github.
+
+docker build
+--------------------------
+It a containerization tool.to run the build on any system where the we don't have software like  java,MySql,windows o/s.
+we have to install them in the container first.
+Then we can run the build on the conatainer.
+This software + the application will create a image file .
+------------------------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=m0a2CzgLNsc
+-------------------------------------------------------------------------------------------
+java -war Jenkins.war
+to start the jenkin
+----------------------------------------------
+steps to test the build
+----------------------------------
+1)go to dashboard and click on new items.
+2)enter the item name
+3)create a new git account where we can upload our build.
+4)to add the build from local system to the github.
+5)git init,git status,git add,git commit -m "This is my first built"
+6)git remote add orign https://github.com/sandipmohapatra/AxisBankTest.git
+7)git push -u origin master
+
+
+
+
+
+
+
+
+
+
