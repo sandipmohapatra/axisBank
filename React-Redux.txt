@@ -1,0 +1,113 @@
+react project-----node server-----localhost:3000
+spring Boot -----tomcat server-----localhost:8090/student
+
+cross origin----this is used by the spring boot to accept the request from the reactjs .
+It have the reactjs port no. localhost:3000.
+The data will come from react (front-end)
+------------------------------------------------------------------------------
+Redux is a javascript library for mantaining state of a application .
+The application will grow and the memory used by the application will also grow.
+So it becomes difficult to keep it organized and maintain the data flow.Redux solves this problem. 
+it is predictable state container for javascript apps.
+It tracks the details and report to the developer,so that we can predict the data stored and the actions performed.
+-------------------------------------------------------
+Redux 3 principles
+1)Single Source of Truth
+The state of your whole appliaction is stored in an object tree with a single store.
+As the whole application state is stored in a single tree,it makes testing,development and debugging easy.
+
+2)State is read-only
+we can make change in the state by emiting an action.
+
+3)Change are made by pure functions
+We have reducer the central place where state modification takes place.
+Reducer is a function which takes state and action as arguments and returns a newly updated state.
+
+Redux cycle
+----------------------
+1)store : It is the location where data is stored.It is application level.
+2)state :- it is used to access data from the store.
+3)UI :- it is the location where we present data.
+4)Actions:- It dispatches the trigger ,action to perform.
+5)Reducer:- It identifies the action and updates data into store.
+
+*Redux has a single store which holds the application state.
+
+Installations:-
+------------------------
+npm install --save redux
+npm install --save react-redux
+npm install --save-dev redux-devtools
+
+----------------------------------------------------------
+initialstate :-where object is called initial state when appliaction is started.
+const initialState={
+isLoading :false,
+items:[],
+hasError:false
+};
+--------------------------------------------------------------------------------------------------------------------
+Implement some action
+-----------------------------------------------
+This will make change on the state property.
+
+return
+{
+type :Request_type,
+isLoading:true
+}
+-------------------------------------------------------------------------------
+Actions and states are held together by a function called reducer.
+const reducer = (state = initialState,action) =>
+
+switch(action.type)
+{
+case : 'ITEMS_REQUEST':
+ return Object.assign({},state,{
+isLoading :action.isLoading
+})
+default:
+return state;
+}
+}
+----------------------------------------------------------------------
+
+shopping cart :-
+Step 1:-Initial
+------------------------------------
+const initialState={
+isAddedToCart :false,
+items:[],
+hasError:false
+};
+-------------------------------------------------------------------
+Step 2:-action
+
+const addToCartReducer = (state = initialState,action) =>
+
+switch(action.type)
+{
+case : 'ADD_To_Cart_Success':
+state.isAddedToCart = !state.isAddedToCart;
+ return state;
+default:
+return state;
+}
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
